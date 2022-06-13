@@ -29,9 +29,9 @@ header {
   background-image: linear-gradient(to bottom, var(--cor3),var(--cor4));
   color: white;
   height: 200px;
-  padding-top: 20px;
-  margin: auto;
+  padding: 0;
   text-align: center;
+  width: 100vw;
 }
 header h1 {
   font-size: 3em;
@@ -140,8 +140,13 @@ main > article > aside > h3 {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-aside > ul {
+aside > ul , abbr{
   columns: 2;
+  list-style-position: inside;
+  text-decoration: none;
+}
+aside > ul > li:hover {
+  text-decoration: underline;
 }
 footer {
   background-color: var(--cor5);
@@ -159,4 +164,111 @@ footer a {
 }
 footer a:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 476px) {
+  header {
+    padding: 0;
+  }
+  nav {
+    padding-top: 0px;
+    display: grid;
+    grid-template-columns: auto auto;
+    height: auto;
+  }
+  aside  li {
+    font-size: 1.1em;
+  }
+  main  p {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 699px) and (min-width:477px) {
+  header {
+    padding: 0;
+  }
+  header > h1 {
+    font-size: 3.2em;
+  }
+  header > p {
+    font-size: 1.7em;
+  }
+  nav {
+    padding-top: 20px;
+    padding-bottom: 8px;
+    font-size: 1.2em;
+  }
+  main > article > aside > h3 {
+    font-size: 1.4em;
+  }
+  main p {
+    font-size: 1.2em;
+  }
+  aside li {
+    font-size: 1.2em;
+  }
+  footer {
+    font-size: 1.3em;
+  }
+}
+@media screen and (max-width: 921px) and (min-width: 700px) {
+  header h1{
+    font-size: 3.4em;
+  }
+  header p {
+    font-size: 1.8em;
+  }
+  nav {
+    padding-top: 20px;
+    font-size: 1.3em;
+  }
+  main h1 {
+    font-size: 1.6em;
+  }
+  main h2 {
+    font-size: 1.4em;
+  }
+  main > article > aside > h3 {
+    font-size: 1.5em;
+  }
+  main p {
+    font-size: 1.25em;
+  }
+  aside li {
+    font-size: 1.2em;
+  }
+  footer {
+    font-size: 1.3em;
+  }
+}
+@media screen and (min-width: 922px) {
+  header h1 {
+    font-size: 4em;
+  }
+  header p {
+    font-size: 2em;
+  }
+  nav {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    font-size: 1.5em;
+  }
+  main h1 {
+    font-size: 1.8em;
+  }
+  main h2 {
+    font-size: 1.6em;
+  }
+  main > article > aside > h3 {
+    font-size: 1.6em;
+  }
+  main p {
+    font-size: 1.35em;
+  }
+  aside li {
+    font-size: 1.4em;
+  }
+  footer {
+    font-size: 1.5em;
+  }
 }
